@@ -864,8 +864,10 @@
         <div class="footer__left">
           <img class="footer__mark" src="assets/nexulorum_emblem_icon.png" alt="" aria-hidden="true" />
           <div>
+            
             <div class="footer__name">Nexulorum</div>
             <div class="footer__tag">Engineering the stack behind your success.</div>
+            <p>© <span id="year"></span> Nexulorum™. All rights reserved.</p>
           </div>
         </div>
 
@@ -882,5 +884,8 @@
     </footer>
 
   <script src="script.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
