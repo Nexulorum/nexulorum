@@ -155,7 +155,7 @@ a:hover{opacity:.95}
   box-shadow: var(--shadow2);
 }
 .hero__logo{
-  width:min(520px,100%);
+  width:min(512px,100%);
   height:auto;
   display:block;
   filter: drop-shadow(0 0 30px #000000aa);

@@ -25,6 +25,7 @@
   <link rel="icon" href="/assets/favicon.ico" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="canonical" href="https://www.nexulorum.com/" />
+  <link rel="preload" as="image" href="/assets/nexulorum_logo_full.webp" imagesrcset="/assets/nexulorum_logo_full.webp 1x, /assets/nexulorum_logo_full_1024">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -96,7 +97,17 @@
       <div class="hero__grid">
         <div class="hero__left">
           <div class="hero__logo-wrap lux-border lux-sheen">
-            <img class="hero__logo" src="assets/nexulorum_logo_full.webp" alt="Nexulorum logo" />
+            <img
+              class="hero__logo"
+              src="/assets/nexulorum_logo.webp"
+              srcset="/assets/nexulorum_logo_full.webp 1x, /assets/nexulorum_logo_full_1024.webp 2x"
+
+              width="512"
+              height="512"
+              alt="Nexulorum logo"
+              loading="eager"
+              decoding="async"
+            />
           </div>
 
           <p class="kicker">Security-first web engineering • Premium design • Scalable builds</p>
