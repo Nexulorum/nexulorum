@@ -160,6 +160,30 @@ a:hover{opacity:.95}
   display:block;
   filter: drop-shadow(0 0 30px #000000aa);
 }
+
+/* Hero logo: prevent mobile overflow */
+.hero__logo-wrap { max-width: 100%; }
+
+.hero__logo{
+  width: 100%;
+  max-width: 512px;   /* keep desktop behavior */
+  height: auto;
+}
+
+/* Mobile: cap the logo to viewport */
+@media (max-width: 520px){
+  .hero__logo-wrap{
+    width: 100%;
+    justify-content: center;
+  }
+  .hero__logo{
+    max-width: 360px; /* or 320 if you want tighter */
+  }
+}
+.hero{ overflow: clip; } /* or overflow:hidden; */
+.hero { overflow: hidden; } /* use hidden for broad support */
+.hero__grid { width: min(1120px, 92vw); max-width: 100%; }
+
 .kicker{
   margin:18px 0 10px;
   color:var(--muted2);
@@ -285,6 +309,19 @@ a:hover{opacity:.95}
   font-size:.92rem;
   line-height:1.45;
   overflow:auto;
+}
+
+/* Fix: prevent code panel from forcing horizontal overflow */
+.panel,
+.codebox,
+.codebox__pre {
+  max-width: 100%;
+}
+
+.codebox__pre {
+  overflow-x: auto;
+  white-space: pre-wrap;    /* allows wrapping instead of forcing width */
+  word-break: break-word;   /* breaks long tokens if needed */
 }
 
 .fineprint{color:var(--muted);line-height:1.6;margin:12px 0 0}
