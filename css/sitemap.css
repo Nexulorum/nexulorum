@@ -1,0 +1,94 @@
+/*=================
+site map page 
+====================*/
+.sitemap-links {
+  padding: 80px 0;
+}
+
+.sitemap-intro {
+  max-width: 720px;
+  margin: 12px 0 40px;
+  color: rgba(230, 238, 250, 0.78);
+  line-height: 1.7;
+}
+
+.sitemap-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+@media (max-width: 780px) {
+  .sitemap-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.sitemap-item {
+  padding: 26px 24px;
+  border-radius: 20px;
+  background: rgba(12, 16, 24, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.sitemap-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  height: 2px;
+  background: linear-gradient(90deg, #8cff78, #7c5cff);
+  opacity: 0.6;
+}
+
+.sitemap-item:hover {
+  transform: translateY(-6px);
+  border-color: rgba(140, 255, 120, 0.2);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+}
+
+.sitemap-item h2 {
+  margin: 0 0 12px;
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+.sitemap-item h2 a {
+  text-decoration: none;
+  color: #f4f8ff;
+  transition: color 0.25s ease;
+}
+
+.sitemap-item h2 a:hover {
+  color: #8cff78;
+}
+
+.sitemap-item p {
+  margin: 0;
+  color: rgba(220, 230, 245, 0.75);
+  line-height: 1.65;
+}
+
+.sitemap-links {
+  position: relative;
+  overflow: hidden;
+}
+
+.sitemap-links::after {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  right: -150px;
+  top: -200px;
+  background: radial-gradient(circle, rgba(124, 92, 255, 0.12), transparent 60%);
+  filter: blur(30px);
+  pointer-events: none;
+}

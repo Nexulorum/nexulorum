@@ -1,0 +1,100 @@
+/* =========================
+   THANK YOU PAGE
+   ========================= */
+
+.thankyou-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #f6f7fb, #eef1f7);
+  padding: 40px 20px;
+}
+
+.thankyou-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.thankyou-card {
+  max-width: 600px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 48px;
+  text-align: center;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.08);
+}
+
+.thankyou-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #45b266, #00d9ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thankyou-icon i {
+  color: #ffffff;
+  font-size: 26px;
+}
+
+.thankyou-card h1 {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+  color: var(--text-soft);
+}
+
+.thankyou-main {
+  font-size: 1.05rem;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.thankyou-sub {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 28px;
+}
+
+.thankyou-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* 
+   THANK YOU PAGE BUTTON 
+  */
+
+.thankyou-section .cta-btn.hex-outline {
+  color: #1f2333;
+}
+
+.thankyou-section .cta-btn.hex-outline span {
+  color: #1f2333;
+}
+
+/* inner stays white */
+.thankyou-section .cta-btn.hex-outline::after {
+  background: #ffffff;
+  opacity: 1;
+}
+
+/* outer stays hidden until hover (same effect) */
+.thankyou-section .cta-btn.hex-outline::before {
+  opacity: 0;
+}
+
+/* hover = SAME EFFECT */
+.thankyou-section .cta-btn.hex-outline:hover::before {
+  opacity: 1;
+}
+
+.thankyou-section .cta-btn.hex-outline:hover::after {
+  background: #ffffff;
+}
