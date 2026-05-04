@@ -34,67 +34,63 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Nexulorum",
-      "url": "https://www.nexulorum.com/",
-      "image": "https://www.nexulorum.com/assets/nexulorum_logo_full.webp",
-      "telephone": "(314) 472-5282",
-      "email": "nexulorum@nexulorum.com",
-
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Imperial",
-        "addressRegion": "MO",
-        "addressCountry": "US"
-      },
-
-      "areaServed": [
+      "@graph": [
         {
-          "@type": "City",
-          "name": "Imperial"
+          "@type": "ProfessionalService",
+          "@id": "https://www.nexulorum.com/#business",
+          "name": "Nexulorum",
+          "url": "https://www.nexulorum.com/",
+          "image": "https://www.nexulorum.com/assets/nexulorum_logo_full.webp",
+          "logo": "https://www.nexulorum.com/assets/nexulorum_logo_full.webp",
+          "telephone": "+13144725282",
+          "email": "nexulorum@nexulorum.com",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Imperial",
+            "addressRegion": "MO",
+            "addressCountry": "US"
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Imperial"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Jefferson County"
+            }
+          ],
+          "sameAs": [
+            "https://www.facebook.com/people/Nexulorum/61586324810774/",
+            "https://www.instagram.com/nexulorum54/"
+          ]
         },
         {
-          "@type": "AdministrativeArea",
-          "name": "Jefferson County"
+          "@type": "WebSite",
+          "@id": "https://www.nexulorum.com/#website",
+          "name": "Nexulorum",
+          "url": "https://www.nexulorum.com/",
+          "publisher": {
+            "@id": "https://www.nexulorum.com/#business"
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.nexulorum.com/#webpage",
+          "url": "https://www.nexulorum.com/",
+          "name": "Web Design in Imperial, MO | Nexulorum",
+          "description": "Nexulorum provides web design, web development, SEO, hosting, maintenance, and cybersecurity services for small businesses in Imperial, MO and Jefferson County.",
+          "isPartOf": {
+            "@id": "https://www.nexulorum.com/#website"
+          },
+          "about": {
+            "@id": "https://www.nexulorum.com/#business"
+          },
+          "primaryImageOfPage": {
+            "@id": "https://www.nexulorum.com/#business"
+          }
         }
-      ],
-
-      "sameAs": [
-        "https://www.facebook.com/people/Nexulorum/61586324810774/",
-        "https://www.instagram.com/nexulorum54/",
       ]
-    } 
-  </script>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "@id": "https://www.nexulorum.com/#website",
-      "name": "Nexulorum",
-      "url": "https://www.nexulorum.com/",
-      "publisher": {
-        "@type": "LocalBusiness",
-        "@id": "https://www.nexulorum.com/#business",
-        "name": "Nexulorum",
-        "url": "https://www.nexulorum.com/"
-      }
-    }
-  </script>
- 
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "@id": "https://www.nexulorum.com/#webpage",
-      "url": "https://www.nexulorum.com/",
-      "name": "Web Design in Imperial, MO | Nexulorum",
-      "description": "Nexulorum provides web design, web development, SEO, hosting, maintenance, and cybersecurity services for small businesses in Imperial, MO and Jefferson County.",
-      "about": {
-        "@id": "https://www.nexulorum.com/#business"
-      },
-      "isPartOf": {
-        "@id": "https://www.nexulorum.com/#website"
-      }
     }
   </script>
 </head>
